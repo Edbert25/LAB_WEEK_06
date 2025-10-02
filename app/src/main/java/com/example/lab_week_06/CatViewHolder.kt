@@ -15,7 +15,7 @@ private const val UNKNOWN_SYMBOL = "?"
 class CatViewHolder(
     private val containerView: View,
     private val imageLoader: ImageLoader,
-    private val onClickListener: CatAdapter.OnClickListener   // ✅ listener dari CatAdapter
+    private val onClickListener: CatAdapter.OnClickListener
 ) : RecyclerView.ViewHolder(containerView) {
 
     private val catBiographyView: TextView by lazy { containerView.findViewById(R.id.cat_biography) }

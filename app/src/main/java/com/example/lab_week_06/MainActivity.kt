@@ -30,16 +30,21 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = catAdapter
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
-        // ✅ sesuai modul: attach ItemTouchHelper sebelum setData
         val itemTouchHelper = ItemTouchHelper(catAdapter.swipeToDeleteCallback)
         itemTouchHelper.attachToRecyclerView(recyclerView)
 
-        // isi data (boleh 3 dulu, nanti Assignment ditambah jadi 10)
         catAdapter.setData(
             listOf(
                 CatModel(Gender.Male, CatBreed.BalineseJavanese, "Fred", "Silent and deadly", "https://cdn2.thecatapi.com/images/7dj.jpg"),
                 CatModel(Gender.Female, CatBreed.ExoticShorthair, "Wilma", "Cuddly assassin", "https://cdn2.thecatapi.com/images/egv.jpg"),
-                CatModel(Gender.Unknown, CatBreed.AmericanCurl, "Curious George", "Award winning investigator", "https://cdn2.thecatapi.com/images/bar.jpg")
+                CatModel(Gender.Unknown, CatBreed.AmericanCurl, "Curious George", "Award winning investigator", "https://cdn2.thecatapi.com/images/bar.jpg"),
+                CatModel(Gender.Male, CatBreed.AmericanCurl, "Leo", "Brave hunter", "https://cdn2.thecatapi.com/images/bpc.jpg"),
+                CatModel(Gender.Female, CatBreed.ExoticShorthair, "Luna", "Sweet dreamer", "https://cdn2.thecatapi.com/images/c9h.jpg"),
+                CatModel(Gender.Male, CatBreed.BalineseJavanese, "Max", "Playful buddy", "https://cdn2.thecatapi.com/images/ci3.jpg"),
+                CatModel(Gender.Female, CatBreed.AmericanCurl, "Molly", "Calm observer", "https://cdn2.thecatapi.com/images/dci.jpg"),
+                CatModel(Gender.Male, CatBreed.ExoticShorthair, "Oscar", "Cheerful cat", "https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg"),
+                CatModel(Gender.Unknown, CatBreed.BalineseJavanese, "Shadow", "Silent guardian", "https://cdn2.thecatapi.com/images/9de.jpg"),
+                CatModel(Gender.Female, CatBreed.AmericanCurl, "Bella", "Gentle soul", "https://cdn2.thecatapi.com/images/8dq.jpg")
             )
         )
     }

@@ -20,7 +20,6 @@ class CatAdapter(
         notifyDataSetChanged()
     }
 
-    // ✅ fungsi hapus item (sesuai modul)
     fun removeItem(position: Int) {
         cats.removeAt(position)
         notifyItemRemoved(position)
@@ -41,7 +40,6 @@ class CatAdapter(
         fun onItemClick(cat: CatModel)
     }
 
-    // ✅ inner class SwipeToDeleteCallback (copy modul)
     inner class SwipeToDeleteCallback : ItemTouchHelper.SimpleCallback(
         0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
     ) {
@@ -72,6 +70,5 @@ class CatAdapter(
         }
     }
 
-    // ✅ sesuai modul: instance callback di-declare di adapter
     val swipeToDeleteCallback = SwipeToDeleteCallback()
 }
